@@ -21,7 +21,7 @@
 ## Цель работы
 Создать и настроить перцептроны, которые будут работать, как логические функции OR, AND, NAND, XOR.
 
-![Image](github_img/img_01.jpg)
+![Image](img/img_help.jpg)
 
 
 
@@ -38,13 +38,12 @@
 - Создать парцентрон NAND и обучить его.
 - Реализовать парцептрон XOR и обучить его.
 
-![Image](github_img/info.jpg)
 
 
 ### Создание шаблона сцены
 Создал простой шаблон сцены, на которую добавил два кубика, они будут визуализировать в дальнейшем модель работы. Скачал скрипт преподавателя, и создал парцептрон, как сказано в методичке.
 
-![Image](github_img/game_scene.jpg)
+![Image](img/img_scene.jpg)
 
 
 
@@ -55,7 +54,7 @@
 Скрипт PerceptronController.cs.
 
 Как выглядит в инспекторе:
-![Image](github_img/contrl.jpg)
+![Image](img/img_controller.jpg)
 
 
 
@@ -82,11 +81,11 @@ public class HelloWorld : MonoBehaviour
 ### Реализация OR
 Созданный перцептрон настраиваем, по методичке, которою предоставил преподаватель. Логика понятна.
 
-![Image](github_img/or_2.jpg)
+![Image](git_img/or_2.jpg)
 
 После заполнения данных указываем количество эпох и запускаем сцену. 
 
-![Image](github_img/or_1.jpg)
+![Image](git_img/or_1.jpg)
 
 Сколько нужно эпох? **Методом тыка 10 раз на старт сцены подряд определил, что для оператора OR (И) вполне достаточно 5 эпох.**
 
@@ -103,7 +102,7 @@ public class HelloWorld : MonoBehaviour
 Для реализации этой модели даже 50 эпох было не достаточно. XOR - это такой оператор, который является комбинацией операторов AND и OR. На этапе реализации такой модели нам придется создать микронейронную сеть т.е использовать комбинацию двух перцептронов.
 Для такой реализации дополнительно создаю пустой объект и вешаю на него скрипт XORCombiner.cs, который, как раз будет посредником между контроллером и перцептронами. XORCombiner возвращает значение с помощью тернарного оператора.
 
-![Image](github_img/xor_1.jpg)
+![Image](git_img/xor_1.jpg)
 
 Из прошлый сцен копирую перцептроны AND и OR, ссылаюсь на них в объекте XORCombiner.
 Дополнительно пришлось модифицировать скрипт контроллера, который я сохранил как PerceptronControllerNew.cs. Как ранее говорил, XOR - комбинация AND и OR.
@@ -116,25 +115,25 @@ public class HelloWorld : MonoBehaviour
 
 OR: 
 
-![Image](github_img/graf_or.jpg)
+![Image](git_img/graf_or.jpg)
 
 AND:
 
-![Image](github_img/graf_and.jpg)
+![Image](git_img/graf_and.jpg)
 
 NAND:
 
-![Image](github_img/graf_nand.jpg)
+![Image](git_img/graf_nand.jpg)
 
 XOR:
 
-![Image](github_img/graf_xor.jpg)
+![Image](git_img/graf_xor.jpg)
 
 
 
 # Задание 3
 Некоторые моменты визуализации описал выше. Вот как всё примерно выглядит:
-![Image](github_img/result.gif)
+![Image](git_img/result.gif)
 
 Можете скачать репозиторий и попробовать, каждая модель работает.
 
@@ -147,4 +146,4 @@ XOR:
 
 Буду ждать комментариев по поводу моего отчёта, хорошего Вам дня !
 
-![Image](github_img/img_end.jpg)
+![Image](img/img_end.jpg)
